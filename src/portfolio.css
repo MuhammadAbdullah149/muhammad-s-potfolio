@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
+/*
+  Stylesheet index
+  1. Theme tokens and global defaults
+  2. CRT and Windows XP theme overrides
+  3. Shared page shell, header, and navigation
+  4. Hero artwork and mini-game
+  5. About, skills, projects, services, and contact
+  6. Footer
+  7. Boot screen, motion, and animation
+  8. Tablet and mobile layouts
+  9. Reduced-motion preferences
+*/
+
+/* 1. Theme tokens and global defaults */
 :root {
   --screen: #0b0f14;
   --panel: #111820;
@@ -78,6 +92,7 @@ textarea:focus-visible {
   background: var(--green);
 }
 
+/* 2. CRT and Windows XP theme overrides */
 .site-shell {
   position: relative;
   overflow: clip;
@@ -293,6 +308,7 @@ textarea:focus-visible {
   color: #506d91;
 }
 
+/* 3. Shared page shell, header, and navigation */
 .screen-noise {
   position: absolute;
   inset: 0;
@@ -406,6 +422,7 @@ textarea:focus-visible {
   border-color: var(--green);
 }
 
+/* 4. Hero artwork and mini-game */
 .hero {
   position: relative;
   z-index: 1;
@@ -600,12 +617,15 @@ textarea:focus-visible {
   right: 0;
   left: 0;
   display: grid;
-  gap: 5px;
+  gap: 2px;
   margin: 0;
-  padding: 9px 11px;
+  padding: 2px 3px;
+  size: 0;
   border: 2px solid var(--green);
+  border-radius: 10px;
   color: var(--text);
-  background: rgba(8, 14, 17, .94);
+  background: rgba(22, 2, 66, 0.94);
+  text-shadow: 1px 1px #035600;
   text-align: center;
   pointer-events: none;
 }
@@ -1045,6 +1065,7 @@ textarea:focus-visible {
   background: var(--green);
 }
 
+/* 5. About, skills, projects, services, and contact */
 .section {
   position: relative;
   z-index: 1;
@@ -1705,6 +1726,7 @@ textarea:focus-visible {
   height: 6px;
 }
 
+/* 6. Footer */
 .site-footer {
   position: relative;
   z-index: 1;
@@ -1766,6 +1788,7 @@ textarea:focus-visible {
   border-color: var(--green);
 }
 
+/* 7. Boot screen, motion, and animation */
 .reveal {
   opacity: 0;
   transform: translateY(13px);
@@ -1934,6 +1957,7 @@ textarea:focus-visible {
   }
 }
 
+/* 8. Tablet and mobile layouts */
 @media (max-width: 920px) {
   .wrap {
     width: min(100% - 44px, 720px);
@@ -2377,6 +2401,7 @@ textarea:focus-visible {
   }
 }
 
+/* 9. Reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
 
   *,

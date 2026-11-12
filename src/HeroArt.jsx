@@ -117,13 +117,13 @@ function PlatformGame({ inputRef, onExit, onRestart, xpThemeOn }) {
 
       if (jumpQueued) {
         if (groundedRef.current) {
-          Body.setVelocity(player, { x: player.velocity.x, y: -13.2 })
+          Body.setVelocity(player, { x: player.velocity.x, y: -10 })
           groundedRef.current = false
         }
         inputRef.current.jumpQueued = false
       }
 
-      playerRef.current.style.transform = `translate3d(${player.position.x - 62}px, ${player.position.y - (height - 39)}px, 0)`
+      playerRef.current.style.transform = `translate3d(${player.position.x - 62}px, ${player.position.y - (height + 90)}px, 0)`
       animationFrame = window.requestAnimationFrame(movePlayer)
     }
 
@@ -178,7 +178,7 @@ function PlatformGame({ inputRef, onExit, onRestart, xpThemeOn }) {
       <p className="platform-game__help" id="platform-game-help">MOVE: A / D OR ← → <span>JUMP: SPACE / ↑</span></p>
       {complete && (
         <div className="platform-game__complete" role="status">
-          <span>ALL COINS FOUND!</span>
+          <span>ALL COINS FOUND | Hire ME!</span>
           <button type="button" onClick={onRestart}>PLAY AGAIN ↻</button>
         </div>
       )}
@@ -260,10 +260,11 @@ export default function HeroArt({ xpThemeOn }) {
         <>
           <span className="pixel-star pixel-star--one" aria-hidden="true">✦</span>
           <span className="pixel-star pixel-star--two" aria-hidden="true">✳</span>
+          
           <div className="coin" aria-hidden="true">$</div>
           <PixelCharacter />
           <div className="hero__art-label"><span>FIG. 01</span><span>THE BUILDER</span></div>
-          <p className="game-start-guide" id="hero-game-guide"><strong>CLICK ART TO PLAY</strong><span>MOVE: A / D OR ← → <i>//</i> JUMP: SPACE / ↑</span></p>
+          <p className="game-start-guide" id="hero-game-guide"><i>CLICK ART TO PLAY</i></p>
         </>
       )}
     </div>
