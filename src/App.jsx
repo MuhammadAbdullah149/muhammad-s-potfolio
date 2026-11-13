@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import { profile, projects, services, skills, socialLinks } from './portfolioData.js'
+import dp from './assets/dp.webp'
 import HeroArt from './HeroArt.jsx'
 import './portfolio.css'
 
@@ -245,7 +246,7 @@ function App() {
             <article className="window-panel about-window">
               <WindowBar title="ABOUT_ABDULLAH.TXT" number="A" />
               <div className="about-window__body">
-                <div className="about-window__stamp" aria-hidden="true"><span><img height={120} width={120} src="/src/assets/dp.webp" alt="Muhammad Abdullah" /></span></div>
+                <div className="about-window__stamp" aria-hidden="true"><span><img height={120} width={120} src={dp} alt="Muhammad Abdullah" /></span></div>
                 <div className="about-window__copy">
                   <p className="terminal-label">C:\USER\ABDULLAH&gt; WHOAMI</p>
                   <p>I’m Muhammad Abdullah, a university student and full-stack developer who likes making the internet feel a little more human. I build responsive websites with React and Node.js, and create clear, polished documents that help people put their best work forward.</p>
