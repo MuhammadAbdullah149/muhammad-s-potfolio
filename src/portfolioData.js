@@ -4,7 +4,9 @@ export const profile = {
 }
 
 export const skills = [
-  { name: 'React.js', level: 60, category: 'FRONT-END / UI', icon: 'R' },
+  { name: 'AI/ML engineer', level: 60, category: 'Google Certified', icon: 'AI' },
+  { name: 'Kotlin', level: 80, category: 'App frontend', icon: 'K' },
+  { name: 'Firebase', level: 80, category: 'App backend', icon: 'F' },
   { name: 'Node.js', level: 80, category: 'BACK-END / API', icon: 'N' },
   { name: 'JavaScript', level: 90, category: 'LANGUAGE / LOGIC', icon: 'JS' },
   { name: 'HTML + CSS', level: 85, category: 'WEB / LAYOUT', icon: '</>' },
